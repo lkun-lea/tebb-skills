@@ -11,6 +11,24 @@ Official, versioned instructions for [tebb](https://github.com/lkun-lea/tebb) AI
 | feishu-doc-writing | Prepare a daily work summary from actual calendar, tasks and conversation. |
 | weekly-retro | Review the week using GitHub and Feishu work evidence. |
 
+## Engineering and productivity skills
+
+| Skill | Purpose |
+| --- | --- |
+| [grill-me](skills/grill-me/SKILL.md) | Clarify a proposal through focused questions. |
+| [grill-with-docs](skills/grill-with-docs/SKILL.md) | Clarify a proposal and record domain terminology and decisions. |
+| [tdd](skills/tdd/SKILL.md) | Implement behavior using tests and short feedback loops. |
+| [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | Build a reproducible failure and retain a regression check. |
+| [code-review](skills/code-review/SKILL.md) | Review code against repository standards and the specification. |
+| [grilling](skills/grilling/SKILL.md) | Interview a user to resolve a design decision tree. |
+| [domain-modeling](skills/domain-modeling/SKILL.md) | Maintain shared domain vocabulary and decisions. |
+| [codebase-design](skills/codebase-design/SKILL.md) | Reference for module design and testable interfaces. |
+| [setup-matt-pocock-skills](skills/setup-matt-pocock-skills/SKILL.md) | Configure the optional issue tracker and domain documentation setup. |
+
+The upstream workflows and supporting files are recorded in [Third-party notices](THIRD_PARTY_NOTICES.md). Features such as nested Skill loading or parallel review require the corresponding host capabilities. The diagnostic shell file is a manually invoked template.
+
+## Preparing a release snapshot
+
 tebb pins a full commit and file digests in its `skills-source.json`. Developers explicitly prepare that snapshot; release packages include it for offline use. Starting the app does not fetch the latest branch. See tebb's development guide for the preparation command.
 
 Each `skills/<name>/SKILL.md` has `name` and `description` frontmatter and a nonempty body. Keep names stable, describe prerequisites and actual tools, preserve failure/unknown states, and never embed credentials, personal data, implicit external sends, or executable installation hooks. Skills cannot expand the companion's tools or workspace permissions.
